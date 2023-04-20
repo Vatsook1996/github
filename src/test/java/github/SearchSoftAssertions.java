@@ -14,9 +14,9 @@ public class SearchSoftAssertions {
         // Переход в раздел Wiki проекта
         $("#wiki-tab").click();
         // Проверка, что в списке страниц (Pages) есть страница SoftAssertions
-        $("#wiki-body").shouldHave(text("Soft assertions"));
+        $("#wiki-pages-filter").setValue("SoftAssertions");
         // Открыть страницу SoftAssertions, проверить что внутри есть пример кода для JUnit5
-        $(byText("Soft assertions")).click();
-        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
+        $(byText("SoftAssertions")).click();
+        $(".Layout-main").shouldHave(text("3. Using JUnit5 extend test class:"));
     }
 }
