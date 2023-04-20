@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'ru.testing'
+group 'com.dinosaturnus'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -10,8 +10,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.9.2',
+            'com.codeborne:selenide:6.12.4',
+            'org.slf4j:slf4j-simple:2.0.7'
+    )
+    testImplementation 'org.testng:testng:7.1.0'
+    testImplementation 'junit:junit:4.13.1'
 }
 
 test {
